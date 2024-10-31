@@ -1,0 +1,13 @@
+<h2>To-Do List</h2>
+
+<label for="newTodo">
+    Add new ToDo Item:
+    <input id="newTodo" type="text" [(ngModel)]="newTodoText" />
+</label>
+<button type="submit" (click)="addTodo()">Submit</button>
+
+<ul class="todo-list">
+    <li *ngFor="let todo of todos">
+        <atd-todo-item [todo]="todo" (toggle)="toggleTodo($event)" (delete)="deleteTodo($event)"></atd-todo-item>
+    </li>
+</ul>
