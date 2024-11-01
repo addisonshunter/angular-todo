@@ -19,9 +19,9 @@
 .todo-text {
     margin: 5px;
     margin-left: 20px;
-    overflow: scroll;
+    overflow: auto;
 }
 
 .completed-item {
-    background-color: lightblue;
+    background-color:skyblue;
 }
