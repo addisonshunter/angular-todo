@@ -1,27 +1,48 @@
 # AngularTodo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.10.
+This is a basic proof-of-concept project to create an Angular site displaying
+a to-do list, with functionality for users to add items, toggle completion on
+items, and delete items.
 
-## Development server
+A live version of this site is available at 
+https://addisonshunter.github.io/angular-todo/
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Assumptions in design
 
-## Code scaffolding
+This site is designed with the assumption that users will be accessing this
+site on a desktop device, and is not meant to work on mobile. This also assumes
+a modern, up-to-date web browser as of October 31st, 2024. The site was tested
+on Firefox 132.0, Microsoft Edge 130.0.2849.56, as well as Brave 1.71.121.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+This is also developed as a quick app, with no unit tests provided or major
+industry-standard quality scans run across it. There are also no
+accessibility features, including screen reader or colorblind functionalities.
 
-## Build
+Finally, for the functionality itself, assumptions were made that IDs do not
+need to be displayed to the user, and are instead private to the program itself,
+and that no empty To-Do list items should be accepted. Hard deletes are also
+assumed, so there is no soft delete functionality.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Running the site locally
 
-## Running unit tests
+The following were used to build the application:
+- NPM version 10.9.0
+- Angular version 18.2.10
+For best running, make sure to use these versions.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Clone the repository from github, then navigate into the directory and run:
+`npm install`
 
-## Running end-to-end tests
+Once this is finished, run:
+`ng serve`
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Then open a web browser to http://localhost:4200 to view and interact with the 
+app.
 
-## Further help
+## Deploying the site to Github Pages
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+With proper permissions to the Git repository, run the following commands:
+`ng build`
+`ng deploy --base-href=/angular-todo/`
+
+This will deploy the site on https://addisonshunter.github.io/angular-todo
