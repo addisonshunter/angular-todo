@@ -1,7 +1,11 @@
-<button (click)="toggleCompletion(todo.id)">
-    {{ todo.completed ? 'Mark Incomplete' : 'Mark Complete'}}
-</button>
-<button (click)="deleteItem(todo.id)">
-    Delete
-</button>
-{{todo.title}}
+<div class="todo-item" [ngClass]="{ 'completed-item': todo.completed}">
+    <button class="complete-button" (click)="toggleCompletion(todo.id)">
+        {{ todo.completed ? 'Mark Incomplete' : 'Mark Complete'}}
+    </button>
+    <button class="delete-button" (click)="deleteItem(todo.id)">
+        Delete
+    </button>
+    <span class="todo-text">
+        {{todo.title}}
+    </span>
+</div>

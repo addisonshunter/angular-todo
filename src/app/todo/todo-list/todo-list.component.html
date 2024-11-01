@@ -1,13 +1,22 @@
-<h2>To-Do List</h2>
+<div>
+    <h2>To-Do List</h2>
 
-<label for="newTodo">
-    Add new ToDo Item:
-    <input id="newTodo" type="text" [(ngModel)]="newTodoText" />
-</label>
-<button type="submit" (click)="addTodo()">Submit</button>
-
-<ul class="todo-list">
-    <li *ngFor="let todo of todos">
-        <atd-todo-item [todo]="todo" (toggle)="toggleTodo($event)" (delete)="deleteTodo($event)"></atd-todo-item>
-    </li>
-</ul>
+    <div class="todo-entry">
+        <label for="newTodo">Add new To-Do Item:</label>
+        <input id="newTodo" type="text" [(ngModel)]="newTodoText" />
+        <button type="submit" (click)="addTodo()">Submit</button>
+        <div *ngIf="newTodoError" class="empty-error">
+            * To-Do Item cannot be empty.
+        </div>
+    </div>
+    
+    <ul class="todo-list">
+        <li *ngFor="let todo of todos">
+            <atd-todo-item 
+               [todo]="todo" 
+               (toggle)="toggleTodo($event)" 
+               (delete)="deleteTodo($event)"
+            ></atd-todo-item>
+        </li>
+    </ul>
+</div>

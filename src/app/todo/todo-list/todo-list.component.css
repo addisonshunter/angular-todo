@@ -1,3 +1,31 @@
+.todo-entry {
+    border: 1px;
+}
+
 .todo-list {
+    border: 3px solid slateblue;
+    background-color: lightgrey;
+    height: 500px;
     list-style-type: none;
+    overflow: scroll;
+    padding: 0;
+}
+
+.empty-error {
+    color: firebrick;
+    font-weight: bold;
+    font-style: italic;
+}
+
+input {
+    margin: 5px;
+    padding: 3px;
+    box-shadow: 3px 3px 5px grey;
+    width: 500px;
+}
+
+label {
+    color: slateblue;
+    font-weight: bold;
+    display: block;
 }

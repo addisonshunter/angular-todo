@@ -5,6 +5,7 @@ import { TodoListComponent } from "./todo-list/todo-list.component";
     standalone: true,
     selector: 'atd-todo',
     templateUrl: './todo.component.html',
+    styleUrl: './todo.component.css',
     imports: [ TodoListComponent ],
 })
 export class ToDo {

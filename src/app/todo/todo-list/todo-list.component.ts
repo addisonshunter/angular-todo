@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Todo } from '../shared/todo.model';
-import { NgFor } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 import { TodoItemComponent } from '../todo-item/todo-item.component';
 import { FormsModule } from '@angular/forms';
 
@@ -9,17 +9,14 @@ import { FormsModule } from '@angular/forms';
     selector: 'atd-todo-list',
     templateUrl: './todo-list.component.html',
     styleUrl: './todo-list.component.css',
-    imports: [ NgFor, TodoItemComponent, FormsModule ],
+    imports: [ NgFor, NgIf, TodoItemComponent, FormsModule ],
 })
 export class TodoListComponent {
 
-    todos: Todo[] = [
-      {id: 0, title: 'Do it', completed: false},
-      {id: 1, title: 'Teehee', completed: true},
-      {id: 2, title: 'Augh', completed: false},
-    ];
+    todos: Todo[] = [];
   
     newTodoText: string = '';
+    newTodoError: boolean = false;
 
     getHighestId() {
       if (this.todos.length === 0) {
@@ -31,11 +28,13 @@ export class TodoListComponent {
     addTodo() {
       if (this.newTodoText === '') {
         console.warn('Cannot enter empty ToDo item');
+        this.newTodoError = true;
         return
       }
       let newId = this.getHighestId() + 1;
       this.todos.push({id: newId, title: this.newTodoText, completed: false})
       this.newTodoText = '';
+      this.newTodoError = false;
     }
   
     toggleTodo(id: number) {

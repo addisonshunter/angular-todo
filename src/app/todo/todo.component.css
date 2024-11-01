@@ -1,0 +1,17 @@
+.todo-top {
+    background-color: white;
+    border-radius: 25px;
+    padding: 20px;
+}
+
+.todo-title {
+    color: darkslateblue;
+    margin-top: 0;
+    text-align: center;
+}
+
+.title-divider {
+    color: darkslateblue;
+    border-top: 8px solid darkslateblue;
+    border-radius: 5px;
+}
