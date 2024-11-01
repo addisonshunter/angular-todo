@@ -28,6 +28,7 @@ assumed, so there is no soft delete functionality.
 The following were used to build the application:
 - NPM version 10.9.0
 - Angular version 18.2.10
+
 For best running, make sure to use these versions.
 
 Clone the repository from github, then navigate into the directory and run:
