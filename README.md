@@ -32,9 +32,11 @@ The following were used to build the application:
 For best running, make sure to use these versions.
 
 Clone the repository from github, then navigate into the directory and run:
+
 `npm install`
 
 Once this is finished, run:
+
 `ng serve`
 
 Then open a web browser to http://localhost:4200 to view and interact with the 
@@ -43,7 +45,9 @@ app.
 ## Deploying the site to Github Pages
 
 With proper permissions to the Git repository, run the following commands:
+
 `ng build`
+
 `ng deploy --base-href=/angular-todo/`
 
 This will deploy the site on https://addisonshunter.github.io/angular-todo
